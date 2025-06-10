@@ -44,7 +44,7 @@ export function AboutSection() {
             <div className="aspect-square relative rounded-2xl overflow-hidden border border-zinc-800">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-teal-500/20 z-10"></div>
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/placeholder.svg"
                 alt="AI Consulting Team"
                 width={600}
                 height={600}
