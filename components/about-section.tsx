@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import "@/app/globals.css"
 
 export function AboutSection() {
   return (
