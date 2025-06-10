@@ -101,9 +101,11 @@ export function HeroSection() {
 
       <div className="absolute bottom-12 left-0 right-0 flex justify-center z-20">
         <div className="animate-bounce">
-          <svg className="w-6 h-6 text-[#888]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+          <a href="#services" aria-label="Scroll to services section">
+            <svg className="w-6 h-6 text-[#888] cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
