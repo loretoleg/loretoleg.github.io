@@ -70,7 +70,7 @@ export function AboutSection() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[3/4] overflow-hidden">
+            <div className="aspect-[3/2] overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
                 alt="Loreto Leg - AI Consultant"
