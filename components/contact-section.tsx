@@ -1,98 +1,121 @@
+"use client"
+
+import type React from "react"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Phone } from "lucide-react"
 
 export function ContactSection() {
-  return (
-    <section id="contact" className="py-20 bg-zinc-950 border-t border-zinc-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
-              Get In Touch
-            </span>
-          </h2>
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Ready to transform your business with AI? Contact us today to schedule a consultation.
-          </p>
-        </div>
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-zinc-900 p-8 rounded-xl border border-zinc-800">
-            <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name
-                  </label>
-                  <Input id="name" placeholder="Your name" className="bg-zinc-950 border-zinc-800" />
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Form submission logic would go here
+    console.log(formState)
+    alert("Form submitted! (This is just a demo)")
+  }
+
+  return (
+    <section id="contact" className="py-32">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div>
+            <span className="text-sm uppercase tracking-widest text-[#888]">Contact</span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-8">Get in touch</h2>
+
+            <p className="text-[#aaa] max-w-md">
+              Have a project in mind or want to learn more about how AI can benefit your business? Let's start a
+              conversation.
+            </p>
+
+            <div className="mt-12">
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-[#111] flex items-center justify-center mr-4">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <Input id="email" type="email" placeholder="Your email" className="bg-zinc-950 border-zinc-800" />
-                </div>
+                <a href="mailto:loretoleg@gmail.com" className="text-[#aaa] hover:text-white transition-colors">
+                  loretoleg@gmail.com
+                </a>
               </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject
-                </label>
-                <Input id="subject" placeholder="Subject" className="bg-zinc-950 border-zinc-800" />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <Textarea id="message" placeholder="Your message" rows={5} className="bg-zinc-950 border-zinc-800" />
-              </div>
-              <Button className="w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white">Send Message</Button>
-            </form>
+            </div>
           </div>
 
-          <div className="flex flex-col justify-between">
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold mb-6">Contact Info</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-zinc-900 p-3 rounded-lg mr-4">
-                    <Mail className="h-6 w-6 text-purple-500" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium mb-1">Email</h4>
-                    <p className="text-zinc-400">contact@nexusai.com</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-zinc-900 p-3 rounded-lg mr-4">
-                    <Phone className="h-6 w-6 text-teal-500" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium mb-1">Phone</h4>
-                    <p className="text-zinc-400">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-zinc-900 p-3 rounded-lg mr-4">
-                    <MapPin className="h-6 w-6 text-purple-500" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium mb-1">Location</h4>
-                    <p className="text-zinc-400">123 Tech Avenue, San Francisco, CA 94107</p>
-                  </div>
-                </div>
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm text-[#888] mb-2">
+                  Name
+                </label>
+                <Input
+                  id="name"
+                  name="name"
+                  value={formState.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                  className="bg-[#111] border-[#222] focus:border-[#444] h-14 rounded-none"
+                  required
+                />
               </div>
-            </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-zinc-800">
-              <h3 className="text-xl font-semibold mb-4">Schedule a Consultation</h3>
-              <p className="text-zinc-400 mb-6">
-                Book a free 30-minute consultation with one of our AI experts to discuss your business needs.
-              </p>
-              <Button className="w-full bg-gradient-to-r from-purple-600 to-teal-500 text-white">Book a Call</Button>
-            </div>
+              <div>
+                <label htmlFor="email" className="block text-sm text-[#888] mb-2">
+                  Email
+                </label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                  placeholder="your@email.com"
+                  className="bg-[#111] border-[#222] focus:border-[#444] h-14 rounded-none"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm text-[#888] mb-2">
+                  Message
+                </label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  value={formState.message}
+                  onChange={handleChange}
+                  placeholder="Tell me about your project..."
+                  rows={6}
+                  className="bg-[#111] border-[#222] focus:border-[#444] rounded-none resize-none"
+                  required
+                />
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-white text-black hover:bg-[#eee] rounded-none h-14 font-medium"
+              >
+                Send Message
+              </Button>
+            </form>
           </div>
         </div>
       </div>

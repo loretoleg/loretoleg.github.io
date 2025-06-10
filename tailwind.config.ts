@@ -53,14 +53,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        purple: {
-          500: "#9333ea",
-          600: "#7e22ce",
-        },
-        teal: {
-          400: "#14b8a6",
-          500: "#06b6d4",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -74,7 +66,7 @@ const config = {
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
       },
       animation: {

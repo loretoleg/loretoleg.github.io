@@ -1,8 +1,6 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -14,100 +12,98 @@ export function HeroSection() {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-
-    const particles: {
-      x: number
-      y: number
-      radius: number
-      color: string
-      velocity: { x: number; y: number }
-    }[] = []
-
-    const colors = ["#9333ea", "#14b8a6", "#8b5cf6", "#06b6d4"]
-
-    // Create particles
-    for (let i = 0; i < 50; i++) {
-      const radius = Math.random() * 2 + 0.5
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        velocity: {
-          x: (Math.random() - 0.5) * 0.2,
-          y: (Math.random() - 0.5) * 0.2,
-        },
-      })
-    }
-
-    const animate = () => {
-      requestAnimationFrame(animate)
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-      particles.forEach((particle) => {
-        // Draw particle
-        ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
-        ctx.fillStyle = particle.color
-        ctx.fill()
-
-        // Update position
-        particle.x += particle.velocity.x
-        particle.y += particle.velocity.y
-
-        // Bounce off edges
-        if (particle.x + particle.radius > canvas.width || particle.x - particle.radius < 0) {
-          particle.velocity.x = -particle.velocity.x
-        }
-
-        if (particle.y + particle.radius > canvas.height || particle.y - particle.radius < 0) {
-          particle.velocity.y = -particle.velocity.y
-        }
-      })
-    }
-
-    animate()
-
-    const handleResize = () => {
+    // Set canvas dimensions
+    const setCanvasDimensions = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
     }
 
-    window.addEventListener("resize", handleResize)
+    setCanvasDimensions()
+    window.addEventListener("resize", setCanvasDimensions)
+
+    // Create grid
+    const drawGrid = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      // Draw horizontal lines
+      for (let y = 0; y < canvas.height; y += 40) {
+        ctx.beginPath()
+        ctx.moveTo(0, y)
+        ctx.lineTo(canvas.width, y)
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.03)"
+        ctx.stroke()
+      }
+
+      // Draw vertical lines
+      for (let x = 0; x < canvas.width; x += 40) {
+        ctx.beginPath()
+        ctx.moveTo(x, 0)
+        ctx.lineTo(x, canvas.height)
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.03)"
+        ctx.stroke()
+      }
+    }
+
+    drawGrid()
+    window.addEventListener("resize", drawGrid)
 
     return () => {
-      window.removeEventListener("resize", handleResize)
+      window.removeEventListener("resize", setCanvasDimensions)
+      window.removeEventListener("resize", drawGrid)
     }
   }, [])
 
   return (
-    <section className="relative h-screen flex items-center">
-      <canvas ref={canvasRef} className="absolute inset-0 z-0 opacity-30"></canvas>
-      <div className="container mx-auto px-4 z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
-              Transforming Business
-            </span>{" "}
-            Through AI Innovation
-          </h1>
-          <p className="text-xl md:text-2xl text-zinc-400 mb-8">
-            We help companies harness the power of artificial intelligence to solve complex problems and drive growth.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-gradient-to-r from-purple-600 to-teal-500 text-white text-lg py-6 px-8 rounded-md">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-zinc-700 text-white hover:bg-zinc-900 text-lg py-6 px-8 rounded-md"
-            >
-              Learn More
-            </Button>
+    <section className="relative min-h-screen flex items-center">
+      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
+
+      <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-transparent to-[#030303] z-10"></div>
+
+      <div className="container mx-auto px-6 relative z-20">
+        <div className="max-w-4xl mx-auto md:mx-0">
+          <div className="flex flex-col md:flex-row items-start gap-4 mb-8">
+            <div className="w-20 h-20 rounded-full bg-[#111] flex items-center justify-center mb-6 md:mb-0">
+              <span className="text-xl font-medium">AI</span>
+            </div>
+            <div className="md:ml-4">
+              <h2 className="text-sm uppercase tracking-widest text-[#888] mb-2">AI Consultant</h2>
+              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
+                Crafting <br />
+                <span className="text-[#888]">intelligent</span> <br />
+                solutions
+              </h1>
+            </div>
           </div>
+
+          <div className="mt-12 md:mt-20 md:ml-24">
+            <p className="text-xl md:text-2xl text-[#aaa] max-w-xl leading-relaxed">
+              I help businesses implement cutting-edge AI solutions that drive innovation and create competitive
+              advantage.
+            </p>
+
+            <div className="mt-12 flex flex-col md:flex-row gap-6">
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-white text-black font-medium hover:bg-[#eee] transition-colors inline-flex items-center"
+              >
+                Start a project
+                <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <a href="#services" className="px-8 py-4 border border-[#222] hover:border-[#444] transition-colors">
+                Explore services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-12 left-0 right-0 flex justify-center z-20">
+        <div className="animate-bounce">
+          <svg className="w-6 h-6 text-[#888]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </section>

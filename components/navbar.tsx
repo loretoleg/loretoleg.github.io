@@ -1,63 +1,87 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { useMobile } from "@/hooks/use-mobile"
 
 export function Navbar() {
   const isMobile = useMobile()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold tracking-tighter">
-          <span className="bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">NEXUS AI</span>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "py-4 bg-[#030303]/90 backdrop-blur-md" : "py-6 bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        <Link href="/" className="text-xl font-medium">
+          <span className="text-white">loreto</span>
+          <span className="text-[#555]">leg</span>
         </Link>
 
         {isMobile ? (
           <>
-            <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-white">
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
+            <button
+              onClick={toggleMenu}
+              className="w-10 h-10 flex items-center justify-center text-white bg-[#111] rounded-full"
+            >
+              {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
+            </button>
 
             {isMenuOpen && (
-              <div className="absolute top-16 left-0 right-0 bg-black/95 border-b border-zinc-800 py-4">
-                <div className="flex flex-col space-y-4 px-4">
-                  <Link href="#services" className="py-2 hover:text-purple-400 transition-colors" onClick={toggleMenu}>
+              <div className="fixed inset-0 bg-[#030303] z-40 pt-20">
+                <div className="flex flex-col space-y-8 px-6 py-12">
+                  <Link
+                    href="#services"
+                    className="text-3xl font-light hover:text-[#888] transition-colors"
+                    onClick={toggleMenu}
+                  >
                     Services
                   </Link>
-                  <Link href="#about" className="py-2 hover:text-purple-400 transition-colors" onClick={toggleMenu}>
+                  <Link
+                    href="#about"
+                    className="text-3xl font-light hover:text-[#888] transition-colors"
+                    onClick={toggleMenu}
+                  >
                     About
                   </Link>
-                  <Link href="#contact" className="py-2 hover:text-purple-400 transition-colors" onClick={toggleMenu}>
+                  <Link
+                    href="#contact"
+                    className="text-3xl font-light hover:text-[#888] transition-colors"
+                    onClick={toggleMenu}
+                  >
                     Contact
                   </Link>
-                  <Button className="bg-gradient-to-r from-purple-600 to-teal-500 text-white border-0">
-                    Get Started
-                  </Button>
                 </div>
               </div>
             )}
           </>
         ) : (
-          <div className="flex items-center space-x-8">
-            <Link href="#services" className="text-sm hover:text-purple-400 transition-colors">
+          <div className="flex items-center space-x-12">
+            <Link href="#services" className="text-sm uppercase tracking-wider hover:text-[#888] transition-colors">
               Services
             </Link>
-            <Link href="#about" className="text-sm hover:text-purple-400 transition-colors">
+            <Link href="#about" className="text-sm uppercase tracking-wider hover:text-[#888] transition-colors">
               About
             </Link>
-            <Link href="#contact" className="text-sm hover:text-purple-400 transition-colors">
+            <Link href="#contact" className="text-sm uppercase tracking-wider hover:text-[#888] transition-colors">
               Contact
             </Link>
-            <Button className="bg-gradient-to-r from-purple-600 to-teal-500 text-white border-0">Get Started</Button>
           </div>
         )}
       </div>
