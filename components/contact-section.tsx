@@ -29,9 +29,9 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="min-h-screen flex items-center pt-32 pb-20">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+    <section id="contact" className="bg-[#050505] pt-32 pb-32">
+      <div className="container mx-auto px-6 pb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto items-start">
           <div>
             <span className="text-sm uppercase tracking-widest text-[#888]">Contact</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">Get in touch</h2>
