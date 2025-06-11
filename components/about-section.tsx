@@ -72,7 +72,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="w-full max-w-2xl mx-auto lg:mx-0 overflow-visible">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
+                src="https://nationaltoday.com/wp-content/uploads/2020/02/doggy-date-night.jpg.webp"
                 alt="Loreto Leg - AI Consultant"
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />
