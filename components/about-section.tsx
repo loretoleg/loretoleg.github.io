@@ -11,14 +11,14 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-32 bg-[#050505]">
+    <section id="about" className="py-20 bg-[#050505]">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <span className="text-sm uppercase tracking-widest text-[#888]">About</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-8">Who I am</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Who I am</h2>
 
-            <div className="space-y-6 text-[#aaa]">
+            <div className="space-y-4 text-[#aaa] text-sm md:text-base">
               <p>
                 I'm an AI consultant specializing in helping businesses implement artificial intelligence solutions that
                 drive real value. With expertise in machine learning, data science, and strategic implementation, I
@@ -30,37 +30,37 @@ export function AboutSection() {
               </p>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-2">
               {skills.map((skill, index) => (
-                <span key={index} className="px-4 py-2 bg-[#111] text-sm text-[#aaa]">
+                <span key={index} className="px-3 py-1 bg-[#111] text-xs text-[#aaa]">
                   {skill}
                 </span>
               ))}
             </div>
 
-            <div className="mt-12 grid grid-cols-2 gap-8">
+            <div className="mt-8 grid grid-cols-2 gap-6">
               <div>
-                <h3 className="text-4xl font-bold">8+</h3>
-                <p className="text-[#888] mt-2">Years Experience</p>
+                <h3 className="text-2xl md:text-3xl font-bold">8+</h3>
+                <p className="text-[#888] mt-1 text-sm">Years Experience</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold">50+</h3>
-                <p className="text-[#888] mt-2">Projects Completed</p>
+                <h3 className="text-2xl md:text-3xl font-bold">50+</h3>
+                <p className="text-[#888] mt-1 text-sm">Projects Completed</p>
               </div>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-[#222]">
+            <div className="mt-8 pt-6 border-t border-[#222]">
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-[#111] flex items-center justify-center mr-4">
-                  <Github className="w-5 h-5" />
+                <div className="w-10 h-10 bg-[#111] flex items-center justify-center mr-3">
+                  <Github className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-sm text-[#888] mb-1">View my work and background</p>
+                  <p className="text-xs text-[#888] mb-1">View my work and background</p>
                   <a
                     href="https://github.com/loretoleg"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#aaa] hover:text-white transition-colors"
+                    className="text-sm text-[#aaa] hover:text-white transition-colors"
                   >
                     github.com/loretoleg
                   </a>
@@ -69,8 +69,8 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/3] max-h-72 overflow-hidden">
+          <div className="relative lg:mt-12">
+            <div className="aspect-[3/4] max-w-sm mx-auto lg:mx-0 overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
                 alt="Loreto Leg - AI Consultant"
@@ -78,8 +78,8 @@ export function AboutSection() {
               />
             </div>
 
-            <div className="absolute -bottom-6 -right-6 w-2/3 h-2/3 border-2 border-[#222] -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#111] -z-10"></div>
+            <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-2 border-[#222] -z-10"></div>
+            <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#111] -z-10"></div>
           </div>
         </div>
       </div>
