@@ -11,9 +11,9 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="bg-[#050505] min-h-[calc(100vh+5rem)] pt-32 pb-40 scroll-mt-40">
+    <section id="about" className="bg-[#050505] min-h-[calc(100vh+5rem)] pt-32 pb-40">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
             <span className="text-sm uppercase tracking-widest text-[#888]">About</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Who I am</h2>
@@ -70,7 +70,7 @@ export function AboutSection() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[3/4] w-full max-w-2xl min-h-[500px] mx-auto lg:mx-0 overflow-visible">
+            <div className="w-full max-w-2xl mx-auto lg:mx-0 overflow-visible">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
                 alt="Loreto Leg - AI Consultant"
