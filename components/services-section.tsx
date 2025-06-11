@@ -29,7 +29,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="min-h-screen flex items-center py-20">
+    <section id="services" className="min-h-screen flex items-center pt-32 pb-20">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
