@@ -11,7 +11,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="bg-[#050505] pt-32 pb-32">
+    <section id="about" className="bg-[#050505] pt-32 pb-32 scroll-mt-28">
       <div className="container mx-auto px-6 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
           <div>
