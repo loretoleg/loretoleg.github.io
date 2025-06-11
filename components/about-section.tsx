@@ -11,7 +11,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="bg-[#050505] min-h-screen pt-32 pb-36 scroll-mt-36">
+    <section id="about" className="bg-[#050505] min-h-[calc(100vh+5rem)] pt-32 pb-40 scroll-mt-40">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
           <div>
@@ -70,11 +70,11 @@ export function AboutSection() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[3/4] w-full max-w-xl mx-auto lg:mx-0 overflow-visible">
+            <div className="aspect-[3/4] w-full max-w-2xl min-h-[500px] mx-auto lg:mx-0 overflow-visible">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
                 alt="Loreto Leg - AI Consultant"
-                className="w-full h-full object-contain rounded-lg shadow-lg"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-2 border-[#222] -z-10"></div>
