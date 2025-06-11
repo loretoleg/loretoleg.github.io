@@ -11,8 +11,8 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="min-h-screen flex items-center bg-[#050505] pt-32">
-      <div className="container mx-auto px-6 pb-20">
+    <section id="about" className="min-h-screen flex items-center bg-[#050505] pt-32 pb-32">
+      <div className="container mx-auto px-6 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
             <span className="text-sm uppercase tracking-widest text-[#888]">About</span>
@@ -54,13 +54,13 @@ export function AboutSection() {
                 <div className="w-10 h-10 bg-[#111] flex items-center justify-center mr-3">
                   <Github className="w-4 h-4" />
                 </div>
-                <div>
-                  <p className="text-xs text-[#888] mb-1">View my work and background</p>
+                <div className="min-w-0">
+                  <p className="text-xs text-[#888] mb-1 whitespace-normal break-words">View my work and background</p>
                   <a
                     href="https://github.com/loretoleg"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#aaa] hover:text-white transition-colors"
+                    className="text-sm text-[#aaa] hover:text-white transition-colors break-all"
                   >
                     github.com/loretoleg
                   </a>
@@ -70,7 +70,7 @@ export function AboutSection() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[3/4] max-w-sm mx-auto lg:mx-0 overflow-hidden">
+            <div className="aspect-[3/4] max-w-md w-full mx-auto lg:mx-0 overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
                 alt="Loreto Leg - AI Consultant"
