@@ -29,34 +29,32 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-32">
+    <section id="contact" className="min-h-screen flex items-center py-20">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
           <div>
             <span className="text-sm uppercase tracking-widest text-[#888]">Contact</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-8">Get in touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">Get in touch</h2>
 
-            <p className="text-[#aaa] max-w-md">
+            <p className="text-[#aaa] max-w-md mb-12">
               Have a project in mind or want to learn more about how AI can benefit your business? Let's start a
               conversation.
             </p>
 
-            <div className="mt-12">
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-[#111] flex items-center justify-center mr-4">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <a href="mailto:loretoleg@gmail.com" className="text-[#aaa] hover:text-white transition-colors">
-                  loretoleg@gmail.com
-                </a>
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-[#111] flex items-center justify-center mr-4">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"
+                  />
+                </svg>
               </div>
+              <a href="mailto:loretoleg@gmail.com" className="text-[#aaa] hover:text-white transition-colors">
+                loretoleg@gmail.com
+              </a>
             </div>
           </div>
 

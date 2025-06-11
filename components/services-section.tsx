@@ -29,14 +29,14 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="py-32">
+    <section id="services" className="min-h-screen flex items-center py-20">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
             <span className="text-sm uppercase tracking-widest text-[#888]">Services</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-2">What I offer</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">What I offer</h2>
           </div>
-          <p className="text-[#888] max-w-md mt-4 md:mt-0">
+          <p className="text-[#888] max-w-md mt-4 md:mt-0 text-sm">
             Specialized AI consulting services to help you navigate the complex landscape of artificial intelligence.
           </p>
         </div>
