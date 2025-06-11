@@ -29,7 +29,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="bg-[#050505] min-h-screen pt-32 pb-12 scroll-mt-28">
+    <section id="contact" className="bg-[#050505] min-h-screen pt-32 pb-36 scroll-mt-36">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto items-start">
           <div>
