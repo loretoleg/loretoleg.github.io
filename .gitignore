@@ -8,7 +8,7 @@
 /_next/
 
 # production
-/build
+/out
 
 # debug
 npm-debug.log*
