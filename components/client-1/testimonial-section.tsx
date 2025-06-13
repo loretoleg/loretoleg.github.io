@@ -1,24 +1,30 @@
+"use client"
+
+import { useLanguage } from "@/context/client-language-context"
+
 export function TestimonialSection() {
+  const { t } = useLanguage()
+
   const testimonials = [
     {
       quote:
-        "Implementing this booking system was the best business decision we've made. Our no-show rate dropped by 60% and our stylists can focus on cutting hair instead of managing the phone.",
-      author: "James Wilson",
-      role: "Owner, The Sharp Cut Barbershop",
+        "Implementar este sistema de reservas fue la mejor decisión de negocio que hemos tomado. Nuestra tasa de ausencias bajó un 60% y nuestros estilistas pueden enfocarse en cortar cabello en lugar de manejar el teléfono.",
+      author: "Carlos Mendoza",
+      role: "Propietario, Barbería El Corte Perfecto",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
     },
     {
       quote:
-        "Our customers love being able to book appointments anytime, and we love not having to manage a paper calendar. The system paid for itself within the first month.",
-      author: "Maria Rodriguez",
-      role: "Manager, Style & Edge Salon",
+        "A nuestros clientes les encanta poder reservar citas en cualquier momento, y a nosotros nos encanta no tener que manejar un calendario de papel. El sistema se pagó solo en el primer mes.",
+      author: "María Rodríguez",
+      role: "Gerente, Salón Estilo & Elegancia",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
     },
     {
       quote:
-        "As a small barbershop, we were hesitant about new technology, but the system was incredibly easy to learn. Now we can't imagine running our business without it.",
+        "Como una barbería pequeña, dudábamos sobre nueva tecnología, pero el sistema fue increíblemente fácil de aprender. Ahora no podemos imaginar manejar nuestro negocio sin él.",
       author: "David Chen",
-      role: "Owner, Classic Cuts",
+      role: "Propietario, Cortes Clásicos",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
     },
   ]
@@ -28,12 +34,10 @@ export function TestimonialSection() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
-            <span className="text-sm uppercase tracking-widest text-[#888]">Success Stories</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">What Others Say</h2>
+            <span className="text-sm uppercase tracking-widest text-[#888]">{t("client1.successStories")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">{t("client1.whatOthersSay")}</h2>
           </div>
-          <p className="text-[#888] max-w-md mt-4 md:mt-0 text-sm">
-            Hear from other barbershop owners who have transformed their booking experience.
-          </p>
+          <p className="text-[#888] max-w-md mt-4 md:mt-0 text-sm">{t("client1.testimonialsDescription")}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

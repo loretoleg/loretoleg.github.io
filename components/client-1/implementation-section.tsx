@@ -1,55 +1,61 @@
+"use client"
+
+import { useLanguage } from "@/context/client-language-context"
+
 export function ImplementationSection() {
+  const { t } = useLanguage()
+
   const phases = [
     {
       number: "01",
-      title: "Discovery & Planning",
-      duration: "1 Week",
+      title: t("client1.discoveryPlanning"),
+      duration: "1 Semana",
       description:
-        "We'll analyze your current booking process, identify pain points, and design a custom solution tailored to your barbershop's specific needs.",
+        "Analizaremos tu proceso actual de reservas, identificaremos puntos problemáticos y diseñaremos una solución personalizada para las necesidades específicas de tu barbería.",
       deliverables: [
-        "Current process analysis",
-        "Requirements document",
-        "Solution blueprint",
-        "Implementation timeline",
+        "Análisis del proceso actual",
+        "Documento de requerimientos",
+        "Plano de la solución",
+        "Cronograma de implementación",
       ],
     },
     {
       number: "02",
-      title: "System Setup & Integration",
-      duration: "2 Weeks",
+      title: t("client1.systemSetup"),
+      duration: "2 Semanas",
       description:
-        "We'll set up your booking system, integrate it with calendars and messaging services, and customize it to match your brand.",
+        "Configuraremos tu sistema de reservas, lo integraremos con calendarios y servicios de mensajería, y lo personalizaremos para que coincida con tu marca.",
       deliverables: [
-        "Booking system configuration",
-        "Calendar integration",
-        "SMS/Email notification setup",
-        "Staff dashboard",
+        "Configuración del sistema de reservas",
+        "Integración de calendario",
+        "Configuración de notificaciones SMS/Email",
+        "Panel de control del personal",
       ],
     },
     {
       number: "03",
-      title: "Training & Onboarding",
-      duration: "1 Week",
+      title: t("client1.trainingOnboarding"),
+      duration: "1 Semana",
       description:
-        "We'll train your staff on the new system, ensuring everyone is comfortable with the technology and can handle any customer questions.",
+        "Capacitaremos a tu personal en el nuevo sistema, asegurándonos de que todos se sientan cómodos con la tecnología y puedan manejar cualquier pregunta de los clientes.",
       deliverables: [
-        "Staff training sessions",
-        "Documentation and guides",
-        "Customer communication templates",
-        "Support procedures",
+        "Sesiones de capacitación del personal",
+        "Documentación y guías",
+        "Plantillas de comunicación con clientes",
+        "Procedimientos de soporte",
       ],
     },
     {
       number: "04",
-      title: "Launch & Optimization",
-      duration: "Ongoing",
+      title: t("client1.launchOptimization"),
+      duration: "Continuo",
       description:
-        "We'll launch your new booking system, monitor its performance, and make continuous improvements based on feedback and data.",
+        "Lanzaremos tu nuevo sistema de reservas, monitorearemos su rendimiento y haremos mejoras continuas basadas en comentarios y datos.",
       deliverables: [
-        "System launch",
-        "Performance monitoring",
-        "Customer feedback collection",
-        "Regular optimization updates",
+        "Lanzamiento del sistema",
+        "Monitoreo de rendimiento",
+        "Recolección de comentarios de clientes",
+        "Actualizaciones de optimización regulares",
       ],
     },
   ]
@@ -59,12 +65,10 @@ export function ImplementationSection() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
-            <span className="text-sm uppercase tracking-widest text-[#888]">The Process</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Implementation Plan</h2>
+            <span className="text-sm uppercase tracking-widest text-[#888]">{t("client1.theProcess")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">{t("client1.implementationPlan")}</h2>
           </div>
-          <p className="text-[#888] max-w-md mt-4 md:mt-0 text-sm">
-            A clear roadmap to transform your booking experience with minimal disruption to your business.
-          </p>
+          <p className="text-[#888] max-w-md mt-4 md:mt-0 text-sm">{t("client1.implementationDescription")}</p>
         </div>
 
         <div className="space-y-12">
@@ -80,7 +84,7 @@ export function ImplementationSection() {
               <div className="md:col-span-7 bg-[#111] p-8">
                 <p className="text-[#aaa] text-lg mb-6">{phase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-sm uppercase tracking-wider text-[#888]">Deliverables</h4>
+                  <h4 className="text-sm uppercase tracking-wider text-[#888]">Entregables</h4>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {phase.deliverables.map((deliverable, i) => (
                       <li key={i} className="flex items-center">

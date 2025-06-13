@@ -6,8 +6,11 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { useLanguage } from "@/context/client-language-context"
 
 export function CtaSection() {
+  const { t } = useLanguage()
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -26,7 +29,7 @@ export function CtaSection() {
     e.preventDefault()
     // Form submission logic would go here
     console.log(formState)
-    alert("Form submitted! (This is just a demo)")
+    alert("¡Formulario enviado! (Esto es solo una demostración)")
   }
 
   return (
@@ -34,13 +37,10 @@ export function CtaSection() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
           <div>
-            <span className="text-sm uppercase tracking-widest text-[#888]">Next Steps</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">Ready to Transform Your Booking Experience?</h2>
+            <span className="text-sm uppercase tracking-widest text-[#888]">{t("client1.nextSteps")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">{t("client1.readyToTransform")}</h2>
 
-            <p className="text-[#aaa] text-lg max-w-md mb-12">
-              Let's discuss how we can implement this solution for your barbershop and start improving your customer
-              experience today.
-            </p>
+            <p className="text-[#aaa] text-lg max-w-md mb-12">{t("client1.ctaDescription")}</p>
 
             <div className="space-y-6">
               <div className="flex items-start">
@@ -48,10 +48,8 @@ export function CtaSection() {
                   <span className="text-xl font-medium">1</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-2">Free Consultation</h3>
-                  <p className="text-[#888]">
-                    We'll analyze your current booking process and identify opportunities for improvement.
-                  </p>
+                  <h3 className="text-xl font-medium mb-2">{t("client1.freeConsultation")}</h3>
+                  <p className="text-[#888]">{t("client1.consultationDesc")}</p>
                 </div>
               </div>
 
@@ -60,10 +58,8 @@ export function CtaSection() {
                   <span className="text-xl font-medium">2</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-2">Custom Proposal</h3>
-                  <p className="text-[#888]">
-                    You'll receive a tailored solution designed specifically for your barbershop's needs.
-                  </p>
+                  <h3 className="text-xl font-medium mb-2">{t("client1.customProposal")}</h3>
+                  <p className="text-[#888]">{t("client1.proposalDesc")}</p>
                 </div>
               </div>
 
@@ -72,10 +68,8 @@ export function CtaSection() {
                   <span className="text-xl font-medium">3</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-2">Seamless Implementation</h3>
-                  <p className="text-[#888]">
-                    We'll handle the entire setup process with minimal disruption to your business.
-                  </p>
+                  <h3 className="text-xl font-medium mb-2">{t("client1.seamlessImplementation")}</h3>
+                  <p className="text-[#888]">{t("client1.implementationDesc")}</p>
                 </div>
               </div>
             </div>
@@ -83,18 +77,18 @@ export function CtaSection() {
 
           <div>
             <div className="bg-[#111] p-8 md:p-12">
-              <h3 className="text-2xl font-medium mb-8">Get Started Today</h3>
+              <h3 className="text-2xl font-medium mb-8">{t("client1.getStartedToday")}</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm text-[#888] mb-2">
-                    Name
+                    {t("nameLabel")}
                   </label>
                   <Input
                     id="name"
                     name="name"
                     value={formState.name}
                     onChange={handleChange}
-                    placeholder="Your name"
+                    placeholder={t("namePlaceholder")}
                     className="bg-[#0a0a0a] border-[#222] focus:border-[#444] h-14 rounded-none"
                     required
                   />
@@ -102,7 +96,7 @@ export function CtaSection() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm text-[#888] mb-2">
-                    Email
+                    {t("emailLabel")}
                   </label>
                   <Input
                     id="email"
@@ -110,7 +104,7 @@ export function CtaSection() {
                     type="email"
                     value={formState.email}
                     onChange={handleChange}
-                    placeholder="your@email.com"
+                    placeholder={t("emailPlaceholder")}
                     className="bg-[#0a0a0a] border-[#222] focus:border-[#444] h-14 rounded-none"
                     required
                   />
@@ -118,7 +112,7 @@ export function CtaSection() {
 
                 <div>
                   <label htmlFor="phone" className="block text-sm text-[#888] mb-2">
-                    Phone
+                    {t("client1.phone")}
                   </label>
                   <Input
                     id="phone"
@@ -126,7 +120,7 @@ export function CtaSection() {
                     type="tel"
                     value={formState.phone}
                     onChange={handleChange}
-                    placeholder="Your phone number"
+                    placeholder={t("client1.phonePlaceholder")}
                     className="bg-[#0a0a0a] border-[#222] focus:border-[#444] h-14 rounded-none"
                     required
                   />
@@ -134,14 +128,14 @@ export function CtaSection() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm text-[#888] mb-2">
-                    Tell us about your barbershop
+                    {t("client1.tellUsAboutBarbershop")}
                   </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formState.message}
                     onChange={handleChange}
-                    placeholder="Number of chairs, current booking process, main challenges..."
+                    placeholder={t("client1.barbershopPlaceholder")}
                     rows={4}
                     className="bg-[#0a0a0a] border-[#222] focus:border-[#444] rounded-none resize-none"
                     required
@@ -152,7 +146,7 @@ export function CtaSection() {
                   type="submit"
                   className="w-full bg-white text-black hover:bg-[#eee] rounded-none h-14 font-medium"
                 >
-                  Schedule Free Consultation
+                  {t("client1.scheduleConsultation")}
                 </Button>
               </form>
             </div>
