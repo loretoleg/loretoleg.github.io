@@ -13,6 +13,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/loretoleg.github.io' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/loretoleg.github.io' : '',
 }
 
 export default nextConfig

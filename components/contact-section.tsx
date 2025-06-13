@@ -6,8 +6,11 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { useLanguage } from "@/context/language-context"
 
 export function ContactSection() {
+  const { t } = useLanguage()
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -29,17 +32,14 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="bg-[#050505] min-h-[calc(100vh+5rem)] pt-32 pb-40">
+    <section id="contact" className="flex items-center pb-20">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
           <div>
             <span className="text-sm uppercase tracking-widest text-[#888]">Contact</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">Get in touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">{t("contactTitle")}</h2>
 
-            <p className="text-[#aaa] max-w-md mb-12">
-              Have a project in mind or want to learn more about how AI can benefit your business? Let's start a
-              conversation.
-            </p>
+            <p className="text-[#aaa] max-w-md mb-12">{t("contactDescription")}</p>
 
             <div className="flex items-center">
               <div className="w-12 h-12 bg-[#111] flex items-center justify-center mr-4">
@@ -48,7 +48,7 @@ export function ContactSection() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2v10a2 2 0 002 2z"
                   />
                 </svg>
               </div>
@@ -62,14 +62,14 @@ export function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm text-[#888] mb-2">
-                  Name
+                  {t("nameLabel")}
                 </label>
                 <Input
                   id="name"
                   name="name"
                   value={formState.name}
                   onChange={handleChange}
-                  placeholder="Your name"
+                  placeholder={t("namePlaceholder")}
                   className="bg-[#111] border-[#222] focus:border-[#444] h-14 rounded-none"
                   required
                 />
@@ -77,7 +77,7 @@ export function ContactSection() {
 
               <div>
                 <label htmlFor="email" className="block text-sm text-[#888] mb-2">
-                  Email
+                  {t("emailLabel")}
                 </label>
                 <Input
                   id="email"
@@ -85,7 +85,7 @@ export function ContactSection() {
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
-                  placeholder="your@email.com"
+                  placeholder={t("emailPlaceholder")}
                   className="bg-[#111] border-[#222] focus:border-[#444] h-14 rounded-none"
                   required
                 />
@@ -93,14 +93,14 @@ export function ContactSection() {
 
               <div>
                 <label htmlFor="message" className="block text-sm text-[#888] mb-2">
-                  Message
+                  {t("messageLabel")}
                 </label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formState.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your project..."
+                  placeholder={t("messagePlaceholder")}
                   rows={6}
                   className="bg-[#111] border-[#222] focus:border-[#444] rounded-none resize-none"
                   required
@@ -111,7 +111,7 @@ export function ContactSection() {
                 type="submit"
                 className="w-full bg-white text-black hover:bg-[#eee] rounded-none h-14 font-medium"
               >
-                Send Message
+                {t("sendMessage")}
               </Button>
             </form>
           </div>
