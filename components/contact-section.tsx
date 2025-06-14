@@ -36,16 +36,20 @@ export function ContactSection() {
       body: JSON.stringify(formState),
     })
 
-    if (response.ok) {
-      alert("Form submitted successfully!")
-    } else {
-      alert("Failed to submit the form.")
+    const result = await response.text() // <== show the body even if it's not JSON
+      console.log("Lambda response:", result)
+
+      if (response.ok) {
+        alert("Form submitted successfully!")
+      } else {
+        alert("Failed to submit the form. Check console.")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      alert("An error occurred.")
     }
-  } catch (error) {
-    console.error("Error submitting form:", error)
-    alert("An error occurred.")
   }
-}
+
 
 
   return (
