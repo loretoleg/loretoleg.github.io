@@ -24,12 +24,29 @@ export function ContactSection() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Form submission logic would go here
-    console.log(formState)
-    alert("Form submitted! (This is just a demo)")
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+
+  try {
+    const response = await fetch("https://lpvni7bguxwspcrrmev5grslk40xgqrh.lambda-url.us-east-1.on.aws/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formState),
+    })
+
+    if (response.ok) {
+      alert("Form submitted successfully!")
+    } else {
+      alert("Failed to submit the form.")
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error)
+    alert("An error occurred.")
   }
+}
+
 
   return (
     <section id="contact" className="flex items-center pb-20">
