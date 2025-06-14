@@ -204,7 +204,25 @@ export const translations = {
       tellUsAboutBarbershop: "Tell us about your barbershop",
       barbershopPlaceholder: "Number of chairs, current booking process, main challenges...",
       phone: "Phone",
-      phonePlaceholder: "Your phone number",
+      phonePlaceholder: "Your phone number",      
+      
+      // Simple Hero (New keys for the custom client page)
+      simpleHero: {
+        title1: "Customized Booking System",
+        title2: "Personalized",
+        title3: "for your Barbershop",
+        description1: "I'll build you a booking system made specifically for your barbershop.",
+        descriptionStrong: "No upfront cost.",
+        description2: "You only pay if you decide to keep it after trying it out.",
+        howItWorksTitle: "How does it work?",
+        step1Strong: "I build your system for free",
+        step1Description: "A personalized system to handle WhatsApp bookings, customer tracking, and automatic reminders.",
+        step2Strong: "You try it for 2-3 weeks",
+        step2Description: "No commitments, no contracts. Just use it and see if it makes your life easier.",
+        step3Strong: "You decide if it's worth it",
+        step3Description: "If you like it and use it, we'll talk about a fair price. If not, no hard feelings.",
+        ctaButton: "I want my custom system"
+      }
     },
   },
   es: {
@@ -414,7 +432,25 @@ export const translations = {
       tellUsAboutBarbershop: "Cuéntanos sobre tu barbería",
       barbershopPlaceholder: "Número de sillas, proceso actual de reservas, principales desafíos...",
       phone: "Teléfono",
-      phonePlaceholder: "Tu número de teléfono",
+      phonePlaceholder: "Tu número de teléfono",      
+
+      // Simple Hero (Nuevas claves para la página de cliente personalizada)
+      simpleHero: {
+        title1: "Sistema de Reservas",
+        title2: "Personalizado",
+        title3: "para tu Barbería",
+        description1: "Te construyo un sistema de reservas hecho específicamente para tu barbería.",
+        descriptionStrong: "Sin costo inicial.",
+        description2: "Solo pagas si decides quedártelo después de probarlo.",
+        howItWorksTitle: "¿Cómo funciona?",
+        step1Strong: "Construyo tu sistema gratis",
+        step1Description: "Un sistema personalizado para manejar reservas por WhatsApp, seguimiento de clientes, y recordatorios automáticos.",
+        step2Strong: "Lo pruebas por 2-3 semanas",
+        step2Description: "Sin compromisos, sin contratos. Solo úsalo y ve si te facilita la vida.",
+        step3Strong: "Decides si vale la pena",
+        step3Description: "Si te gusta y lo usas, hablamos de un precio justo. Si no, no pasa nada.",
+        ctaButton: "Quiero mi sistema personalizado"
+      }
     },
   },
 }

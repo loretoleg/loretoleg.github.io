@@ -1,12 +1,7 @@
 import { ClientNavbar } from "@/components/client-1/client-navbar"
-import { HeroPitch } from "@/components/client-1/hero-pitch"
-import { ProblemSection } from "@/components/client-1/problem-section"
-import { SolutionSection } from "@/components/client-1/solution-section"
-import { DemoSection } from "@/components/client-1/demo-section"
-import { BenefitsSection } from "@/components/client-1/benefits-section"
-import { ImplementationSection } from "@/components/client-1/implementation-section"
-import { TestimonialSection } from "@/components/client-1/testimonial-section"
-import { CtaSection } from "@/components/client-1/cta-section"
+import { SimpleHero } from "@/components/client-1/simple-hero"
+import { SimpleProblem } from "@/components/client-1/simple-problem"
+import { SimpleContact } from "@/components/client-1/simple-contact"
 import { Footer } from "@/components/footer"
 
 export default function ClientPitchPage() {
@@ -14,14 +9,9 @@ export default function ClientPitchPage() {
     <div className="min-h-screen bg-[#030303] text-white">
       <ClientNavbar />
       <main>
-        <HeroPitch />
-        <ProblemSection />
-        <SolutionSection />
-        <DemoSection />
-        <BenefitsSection />
-        <ImplementationSection />
-        <TestimonialSection />
-        <CtaSection />
+        <SimpleHero />
+        <SimpleProblem />
+        <SimpleContact />
       </main>
       <Footer />
     </div>
