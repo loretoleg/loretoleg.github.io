@@ -14,272 +14,263 @@ export default function PrivacyPolicy() {
 
         <div className="space-y-8 text-[#aaa] leading-relaxed">
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">1. Overview</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">1. About Our Services</h2>
             <p>
-              This Privacy Policy describes how our WhatsApp AI healthcare bot collects, uses, and protects your health
-              information when connecting patients with healthcare professionals. We are committed to protecting your
-              medical privacy and complying with applicable healthcare privacy laws.
+              loretoleg provides AI consulting services and develops custom artificial intelligence solutions for
+              businesses across various industries including healthcare, retail, finance, and automation. We specialize
+              in creating tailored AI applications, machine learning models, and intelligent systems that meet specific
+              business requirements.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">2. Health Information We Collect</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">2. Our Data Protection Commitment</h2>
+            <div className="bg-[#111] p-6 rounded border-l-4 border-white">
+              <p className="text-white font-medium mb-2">Core Privacy Principles:</p>
+              <ul className="list-disc list-inside space-y-2">
+                <li className="text-white">
+                  We never sell, trade, or monetize client data from any applications we develop
+                </li>
+                <li className="text-white">All custom solutions are built with privacy-by-design principles</li>
+                <li className="text-white">Industry-specific compliance requirements are integrated from the start</li>
+                <li className="text-white">Client data ownership and control remain with the client at all times</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-medium text-white mb-4">3. Information We Collect</h2>
             <div className="space-y-4">
               <p>
-                <strong className="text-white">From Patients:</strong>
+                <strong className="text-white">During Consultations and Project Development:</strong>
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Symptoms, medical concerns, and health conditions shared via WhatsApp</li>
-                <li>Medical history, current medications, and allergies</li>
-                <li>Treatment preferences and healthcare goals</li>
-                <li>Emergency contact information</li>
-                <li>Insurance information (when provided)</li>
-                <li>Location data for finding nearby healthcare providers</li>
+                <li>Business information and project requirements</li>
+                <li>Technical specifications and system preferences</li>
+                <li>Contact information for project communication</li>
+                <li>Industry-specific needs and compliance requirements</li>
+                <li>Existing system information and integration needs</li>
               </ul>
 
               <p className="mt-6">
-                <strong className="text-white">From Healthcare Professionals:</strong>
+                <strong className="text-white">Through Our Website:</strong>
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Medical license numbers and verification documents</li>
-                <li>Specialty certifications and professional credentials</li>
-                <li>Professional identification photos and documents</li>
-                <li>Practice location, contact information, and availability</li>
-                <li>Educational background and professional experience</li>
-                <li>Malpractice insurance information</li>
+                <li>Contact form submissions and inquiry details</li>
+                <li>Email communications and project discussions</li>
+                <li>Basic website analytics (anonymized)</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">3. WhatsApp Integration and Message Processing</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">4. How We Use Your Information</h2>
             <div className="space-y-4">
-              <p>Our AI bot processes WhatsApp messages to:</p>
+              <p>We use collected information solely to:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Understand patient symptoms and healthcare needs</li>
-                <li>Match patients with appropriate healthcare professionals</li>
-                <li>Facilitate appointment scheduling and communication</li>
-                <li>Provide health information and guidance</li>
-              </ul>
-              <p>
-                All conversations are encrypted end-to-end through WhatsApp's security protocols and stored in our
-                HIPAA-compliant database infrastructure.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-medium text-white mb-4">4. Location Data</h2>
-            <p>
-              We collect and process location information to match patients with nearby healthcare providers. Location
-              data is used to calculate distances, provide location-based recommendations, and enable emergency services
-              when necessary. You can opt-out of location sharing, though this may limit our ability to find nearby
-              providers.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-medium text-white mb-4">5. How We Use Your Health Information</h2>
-            <div className="space-y-4">
-              <p>We use your health information to:</p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Connect patients with qualified healthcare professionals</li>
-                <li>Facilitate medical consultations and appointments</li>
-                <li>Provide AI-powered health guidance and information</li>
-                <li>Verify healthcare professional credentials and qualifications</li>
-                <li>Improve our matching algorithms and service quality</li>
-                <li>Comply with legal and regulatory requirements</li>
-                <li>Provide customer support and technical assistance</li>
+                <li>Provide AI consulting services and technical support</li>
+                <li>Develop and deliver custom AI solutions</li>
+                <li>Communicate about project progress and requirements</li>
+                <li>Ensure compliance with industry-specific regulations</li>
+                <li>Improve our consulting methodologies and service quality</li>
+                <li>Fulfill legal and contractual obligations</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">6. Information Sharing and Disclosure</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">5. Custom Application Development</h2>
             <div className="space-y-4">
               <p>
-                <strong className="text-white">
-                  We share your health information only in the following circumstances:
-                </strong>
+                <strong className="text-white">For all applications and systems we develop:</strong>
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>With Healthcare Providers:</strong> Patient information is shared with matched doctors to
-                  facilitate medical consultations
+                  <strong>Data Ownership:</strong> All data generated or processed by your application remains entirely
+                  under your ownership and control
                 </li>
                 <li>
-                  <strong>Emergency Situations:</strong> We may disclose information to emergency services when there's
-                  an immediate threat to health or safety
+                  <strong>No Data Mining:</strong> We do not collect, analyze, or benefit from user data in applications
+                  we build for clients
                 </li>
                 <li>
-                  <strong>Legal Requirements:</strong> We may disclose information when required by law, court order, or
-                  regulatory authority
+                  <strong>Industry Compliance:</strong> We implement appropriate security measures and compliance
+                  frameworks (HIPAA, GDPR, SOX, etc.) based on your industry
                 </li>
                 <li>
-                  <strong>With Your Consent:</strong> We may share information with insurance providers or other parties
-                  with your explicit written consent
+                  <strong>Transparent Architecture:</strong> No backdoors, hidden data collection, or undisclosed
+                  functionality
                 </li>
+                <li>
+                  <strong>Client Control:</strong> You maintain full administrative control over your deployed systems
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-medium text-white mb-4">6. Project Confidentiality</h2>
+            <div className="space-y-4">
+              <p>All client projects and information are treated with strict confidentiality. We do not share:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Business strategies, requirements, or proprietary information</li>
+                <li>Technical implementations, code, or system architectures</li>
+                <li>User data or analytics from deployed applications</li>
+                <li>Client identity or project details (unless explicitly authorized)</li>
+                <li>Performance metrics or usage statistics from client systems</li>
               </ul>
               <p className="mt-4">
-                <strong className="text-red-400">We never sell your health information to third parties.</strong>
+                Non-disclosure agreements (NDAs) are available upon request for additional legal protection.
               </p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">7. Healthcare Compliance</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">7. Data Security Measures</h2>
             <div className="space-y-4">
-              <p>Our platform complies with:</p>
+              <p>We implement comprehensive security practices including:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Encrypted communication channels for all project discussions</li>
+                <li>Secure development environments with access controls</li>
+                <li>Regular security audits and vulnerability assessments</li>
+                <li>Industry-standard encryption for data at rest and in transit</li>
+                <li>Secure code practices and penetration testing</li>
+                <li>Compliance with relevant security frameworks and standards</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-medium text-white mb-4">8. Information Sharing</h2>
+            <div className="space-y-4">
+              <p>We may share information only in these limited circumstances:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>HIPAA:</strong> Health Insurance Portability and Accountability Act privacy and security rules
+                  <strong>With Your Consent:</strong> When you explicitly authorize us to share specific information
                 </li>
                 <li>
-                  <strong>State Medical Privacy Laws:</strong> Applicable state regulations for medical information
-                  protection
+                  <strong>Legal Requirements:</strong> When required by law, court order, or regulatory authority
                 </li>
                 <li>
-                  <strong>International Standards:</strong> GDPR and other international health data protection
-                  regulations where applicable
+                  <strong>Service Providers:</strong> With trusted third-party services (hosting, analytics) under
+                  strict confidentiality agreements
                 </li>
                 <li>
-                  <strong>Medical Licensing Requirements:</strong> State and federal requirements for healthcare
-                  professional verification
+                  <strong>Business Transfer:</strong> In the event of a merger or acquisition, with advance notice to
+                  clients
+                </li>
+              </ul>
+              <p className="mt-4 text-red-400 font-medium">
+                We never sell client information or project data to third parties for marketing or commercial purposes.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-medium text-white mb-4">9. Industry-Specific Compliance</h2>
+            <div className="space-y-4">
+              <p>We ensure compliance with relevant regulations based on your industry:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <strong>Healthcare:</strong> HIPAA, HITECH, and state medical privacy laws
+                </li>
+                <li>
+                  <strong>Financial Services:</strong> SOX, PCI DSS, and financial data protection regulations
+                </li>
+                <li>
+                  <strong>International:</strong> GDPR, CCPA, and other regional privacy laws
+                </li>
+                <li>
+                  <strong>Education:</strong> FERPA and student data protection requirements
+                </li>
+                <li>
+                  <strong>Government:</strong> FedRAMP, FISMA, and government security standards
                 </li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">8. Data Security and Protection</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">10. Data Retention</h2>
             <div className="space-y-4">
-              <p>We implement comprehensive security measures including:</p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>End-to-end encryption for all WhatsApp communications</li>
-                <li>HIPAA-compliant database infrastructure with encryption at rest</li>
-                <li>Multi-factor authentication for healthcare provider accounts</li>
-                <li>Regular security audits and penetration testing</li>
-                <li>Employee training on healthcare privacy and security</li>
-                <li>Secure backup and disaster recovery procedures</li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-medium text-white mb-4">9. Data Retention</h2>
-            <div className="space-y-4">
-              <p>We retain your information as follows:</p>
+              <p>We retain information as follows:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Medical Records:</strong> Patient health information is retained for 7 years as required by
-                  medical record laws
+                  <strong>Project Communications:</strong> Retained for 3 years after project completion for support
+                  purposes
                 </li>
                 <li>
-                  <strong>Conversation Data:</strong> WhatsApp conversations are stored for 3 years for quality
-                  assurance and legal compliance
+                  <strong>Technical Documentation:</strong> Retained as long as necessary to provide ongoing support
                 </li>
                 <li>
-                  <strong>Healthcare Provider Credentials:</strong> Professional verification documents are retained as
-                  long as the provider is active on our platform
+                  <strong>Business Information:</strong> Retained according to legal requirements and business needs
                 </li>
                 <li>
-                  <strong>Location Data:</strong> Location information is retained for 1 year unless you request earlier
-                  deletion
+                  <strong>Client Applications:</strong> Data retention policies are defined by the client and
+                  implemented accordingly
                 </li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">10. Your Rights and Choices</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">11. Your Rights</h2>
             <div className="space-y-4">
-              <p>Under healthcare privacy laws, you have the right to:</p>
+              <p>You have the right to:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>
-                  <strong>Access:</strong> Request a copy of your health information we maintain
-                </li>
-                <li>
-                  <strong>Correction:</strong> Request correction of inaccurate health information
-                </li>
-                <li>
-                  <strong>Restriction:</strong> Request restrictions on how we use or disclose your health information
-                </li>
-                <li>
-                  <strong>Deletion:</strong> Request deletion of your health information (subject to legal retention
-                  requirements)
-                </li>
-                <li>
-                  <strong>Portability:</strong> Request a copy of your health information in a portable format
-                </li>
-                <li>
-                  <strong>Opt-out:</strong> Opt-out of location sharing and non-essential communications
-                </li>
+                <li>Access information we hold about you and your projects</li>
+                <li>Request correction of inaccurate information</li>
+                <li>Request deletion of your information (subject to legal retention requirements)</li>
+                <li>Restrict processing of your information</li>
+                <li>Data portability for information you've provided</li>
+                <li>Object to processing for marketing purposes</li>
+                <li>Withdraw consent where processing is based on consent</li>
               </ul>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">11. Breach Notification</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">12. International Data Transfers</h2>
             <p>
-              In the event of a data breach involving your health information, we will notify you and relevant
-              authorities within 72 hours as required by law. We will provide details about the breach, steps we're
-              taking to address it, and recommendations for protecting your information.
+              If you are located outside the United States, your information may be transferred to and processed in the
+              United States where our services are operated. We ensure appropriate safeguards are in place for
+              international transfers, including standard contractual clauses and adequacy decisions where applicable.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">12. Children's Privacy</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">13. Updates to This Policy</h2>
             <p>
-              Our service is not intended for children under 13. For minors aged 13-17, we require parental consent
-              before collecting any health information. Parents have the right to access, modify, or delete their
-              child's health information.
+              We may update this Privacy Policy to reflect changes in our practices, services, or legal requirements. We
+              will notify clients of material changes via email at least 30 days before changes take effect. Continued
+              use of our services after changes become effective constitutes acceptance of the updated policy.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-medium text-white mb-4">13. International Data Transfers</h2>
-            <p>
-              If you are located outside the United States, your health information may be transferred to and processed
-              in the United States where our servers are located. We ensure appropriate safeguards are in place for
-              international transfers of health data.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-medium text-white mb-4">14. Changes to This Privacy Policy</h2>
-            <p>
-              We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will
-              notify you of material changes via WhatsApp message and email at least 30 days before the changes take
-              effect. Your continued use of our service after changes become effective constitutes acceptance of the
-              updated policy.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-medium text-white mb-4">15. Contact Us</h2>
+            <h2 className="text-2xl font-medium text-white mb-4">14. Contact Us</h2>
             <div className="space-y-4">
               <p>
-                For questions about this Privacy Policy, to exercise your privacy rights, or to report privacy concerns,
-                please contact us:
+                For questions about this Privacy Policy, to exercise your privacy rights, or to discuss project-specific
+                privacy requirements, please contact us:
               </p>
               <div className="bg-[#111] p-6 rounded">
                 <p>
-                  <strong className="text-white">Privacy Officer:</strong> Luis Loreto
+                  <strong className="text-white">AI Consultant:</strong> Luis Loreto
                 </p>
                 <p>
                   <strong className="text-white">Email:</strong> loretoleg@gmail.com
                 </p>
                 <p>
-                  <strong className="text-white">Subject Line:</strong> Privacy Policy Inquiry
+                  <strong className="text-white">Website:</strong> loretoleg.github.io
                 </p>
                 <p>
-                  <strong className="text-white">Response Time:</strong> We will respond to privacy requests within 30
-                  days
+                  <strong className="text-white">Response Time:</strong> We respond to privacy inquiries within 48 hours
                 </p>
               </div>
               <p className="text-sm text-[#666] mt-4">
-                If you believe we have violated your privacy rights, you also have the right to file a complaint with
-                the U.S. Department of Health and Human Services Office for Civil Rights.
+                For project-specific privacy questions or to request an NDA, please include "Privacy Inquiry" in your
+                subject line.
               </p>
             </div>
           </section>
