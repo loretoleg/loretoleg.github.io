@@ -58,12 +58,12 @@ jobs:
       # - name: Clear .next cache
       #   run: rm -rf .next
 
-      - name: Build Next.js site
+      - name: Create env file
         run: |
-          npm run build
-          npm run export
-        env:
-            NEXT_PUBLIC_LAMBDA_URL: ${{ secrets.NEXT_PUBLIC_LAMBDA_URL }}
+          echo "NEXT_PUBLIC_LAMBDA_URL=${{ secrets.NEXT_PUBLIC_LAMBDA_URL }}" >> .env.production
+
+      - name: Build Next.js site
+        run: npm run build
 
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll # Ensures GitHub Pages doesn't run Jekyll
