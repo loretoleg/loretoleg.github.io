@@ -60,6 +60,8 @@ jobs:
 
       - name: Build Next.js site
         run: npm run build # This will use your next.config.mjs with output: 'export'
+        env:
+            NEXT_PUBLIC_LAMBDA_URL: ${{ secrets.NEXT_PUBLIC_LAMBDA_URL }}
 
       - name: Create .nojekyll file
         run: touch ./out/.nojekyll # Ensures GitHub Pages doesn't run Jekyll

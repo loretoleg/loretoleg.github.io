@@ -64,6 +64,6 @@ html {
 }
 
 /* Ensure sections account for fixed navbar */
-section[id] {
+/* section[id] {
   scroll-margin-top: 120px;
-}
+} */

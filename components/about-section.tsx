@@ -16,11 +16,11 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="flex items-center bg-[#050505] pb-56">
+    <section id="about" className="flex items-center bg-[#050505] pb-56 scroll-mt-32">
       <div className="container mx-auto px-6 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div>
-            <span className="text-sm uppercase tracking-widest text-[#888]">About</span>
+            <span className="text-sm uppercase tracking-widest text-[#888]">{t("about")}</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">{t("aboutTitle")}</h2>
 
             <div className="space-y-4 text-[#aaa] text-sm md:text-base">

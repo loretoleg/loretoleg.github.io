@@ -1,15 +1,21 @@
 "use client"
 
 import type React from "react"
-
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useLanguage } from "@/context/language-context"
 
+const lambdaUrl = process.env.NEXT_PUBLIC_LAMBDA_URL
+
+if (!lambdaUrl) {
+  console.error("Lambda URL is not defined. Did you set NEXT_PUBLIC_LAMBDA_URL?")
+}
 export function ContactSection() {
   const { t } = useLanguage()
+  const router = useRouter() 
 
   const [formState, setFormState] = useState({
     name: "",
@@ -24,23 +30,55 @@ export function ContactSection() {
     })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
+  // const handleSubmit = async (e: React.FormEvent) => {
+  // e.preventDefault()
 
-  try {
-    const response = await fetch("https://lpvni7bguxwspcrrmev5grslk40xgqrh.lambda-url.us-east-1.on.aws/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formState),
-    })
+  // try {
+  //   const response = await fetch(lambdaUrl!, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(formState),
+  //   })
 
-    const result = await response.text() // <== show the body even if it's not JSON
+  //   const result = await response.text() // <== show the body even if it's not JSON
+  //     console.log("Lambda response:", result)
+
+  //     if (response.ok) {
+  //       alert("Form submitted successfully!")
+  //     } else {
+  //       alert("Failed to submit the form. Check console.")
+  //     }
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error)
+  //     alert("An error occurred.")
+  //   }
+  // }
+
+const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    try {
+      const response = await fetch(lambdaUrl!, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      })
+
+      const result = await response.text()
       console.log("Lambda response:", result)
 
       if (response.ok) {
         alert("Form submitted successfully!")
+
+        // ✅ Reset form
+        setFormState({ name: "", email: "", message: "" })
+
+        // ✅ Redirect to homepage
+        router.push("/")
       } else {
         alert("Failed to submit the form. Check console.")
       }
@@ -51,13 +89,12 @@ export function ContactSection() {
   }
 
 
-
   return (
-    <section id="contact" className="flex items-center pb-20">
+    <section id="contact" className="flex items-center pb-20 scroll-mt-32">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
           <div>
-            <span className="text-sm uppercase tracking-widest text-[#888]">Contact</span>
+            <span className="text-sm uppercase tracking-widest text-[#888]">{t("contact")}</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">{t("contactTitle")}</h2>
 
             <p className="text-[#aaa] max-w-md mb-12">{t("contactDescription")}</p>

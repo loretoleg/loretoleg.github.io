@@ -31,11 +31,11 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="flex items-center pb-56">
+    <section id="services" className="flex items-center pb-56 scroll-mt-32">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
-            <span className="text-sm uppercase tracking-widest text-[#888]">Services</span>
+            <span className="text-sm uppercase tracking-widest text-[#888]">{t("services")}</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">{t("servicesTitle")}</h2>
           </div>
           <p className="text-[#888] max-w-md mt-4 md:mt-0 text-sm">{t("servicesDescription")}</p>
