@@ -43,8 +43,8 @@ jobs:
       - name: Remove app/_private folder
         run: rm -rf app/_private
 
-      - name: List app folder contents
-        run: ls -R app
+      # - name: List app folder contents
+      #   run: ls -R app
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -55,8 +55,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Clear .next cache
-        run: rm -rf .next
+      # - name: Clear .next cache
+      #   run: rm -rf .next
 
       - name: Build Next.js site
         run: npm run build # This will use your next.config.mjs with output: 'export'
