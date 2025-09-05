@@ -35,6 +35,9 @@ jobs:
           token: ${{ secrets.PAT_FOR_PRIVATE_REPO }}
           path: app
 
+      - name: List app folder contents
+        run: ls -R app
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
