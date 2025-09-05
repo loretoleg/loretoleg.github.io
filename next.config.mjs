@@ -13,6 +13,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    NEXT_PUBLIC_LAMBDA_URL: process.env.NEXT_PUBLIC_LAMBDA_URL,
+  },
   // For a root deployment like https://loretoleg.github.io/,
   // assetPrefix and basePath should be empty or not set.
   // assetPrefix: '',
