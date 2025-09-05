@@ -28,12 +28,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout private repo into app/
+      - name: Checkout private repo into app/dev/
         uses: actions/checkout@v4
         with:
           repository: loretoleg/loretoleg.github.io-private
           token: ${{ secrets.PAT_FOR_PRIVATE_REPO }}
-          path: app
+          path: app/_private
+
+      - name: Move all private client folders to app/
+        run: |
+          shopt -s dotglob
+          mv app/_private/* app/
 
       - name: List app folder contents
         run: ls -R app
