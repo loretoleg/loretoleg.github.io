@@ -59,7 +59,9 @@ jobs:
       #   run: rm -rf .next
 
       - name: Build Next.js site
-        run: npm run build # This will use your next.config.mjs with output: 'export'
+        run: |
+          npm run build
+          npm run export
         env:
             NEXT_PUBLIC_LAMBDA_URL: ${{ secrets.NEXT_PUBLIC_LAMBDA_URL }}
 

@@ -30,32 +30,6 @@ export function ContactSection() {
     })
   }
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  // e.preventDefault()
-
-  // try {
-  //   const response = await fetch(lambdaUrl!, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(formState),
-  //   })
-
-  //   const result = await response.text() // <== show the body even if it's not JSON
-  //     console.log("Lambda response:", result)
-
-  //     if (response.ok) {
-  //       alert("Form submitted successfully!")
-  //     } else {
-  //       alert("Failed to submit the form. Check console.")
-  //     }
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error)
-  //     alert("An error occurred.")
-  //   }
-  // }
-
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
