@@ -28,6 +28,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Checkout private repo into app/
+        uses: actions/checkout@v4
+        with:
+          repository: loretoleg/loretoleg.github.io-private
+          token: ${{ secrets.PAT_FOR_PRIVATE_REPO }}
+          path: app
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
